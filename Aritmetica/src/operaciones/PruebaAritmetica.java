@@ -21,6 +21,6 @@ public class PruebaAritmetica {
 //        int resultado = aritmetica1.sumarConRetorno();
 //        System.out.println("resultado desde la clase de prueba = " + resultado);
 //    
-        System.out.println(aritmetica1.sumarConArgumentos(16, 6));
+        System.out.println(aritmetica1.sumarConArgumentos(17, 6));
     }
 }
