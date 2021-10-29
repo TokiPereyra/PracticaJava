@@ -15,21 +15,42 @@ public class Empleado extends Persona{
     private static int contadorEmpleado;
 
     public Empleado() {
-        
+        this.idEmpleado = ++Empleado.contadorEmpleado;        
+    }
+
+    public Empleado(String nombre) {
+        this.nombre = nombre;
     }
     
-    public Empleado(double sueldo, String nombre) {
-        super(nombre);
+    public Empleado(String nombre, double sueldo) {
+        this();
+        this.nombre = nombre;
         this.sueldo = sueldo;
-        this.idEmpleado = ++Empleado.contadorEmpleado;
+    }
+
+    public Empleado(String nombre, char genero) {
+        this();
+        this.nombre = nombre;
+        this.genero = genero;
+    }
+
+    public Empleado(String nombre, char genero, int edad) {
+        this();
+        this.nombre = nombre;
+        this.genero = genero;
+        this.edad = edad;
+    }
+
+    public Empleado(String nombre, char genero, int edad, String direccion) {
+        this();
+        this.nombre = nombre;
+        this.genero = genero;
+        this.edad = edad;
+        this.direccion = direccion;
     }
 
     public int getIdEmpleado() {
         return this.idEmpleado;
-    }
-
-    public void setIdEmpleado(int idEmpleado) {
-        this.idEmpleado = idEmpleado;
     }
 
     public double getSueldo() {
@@ -38,6 +59,16 @@ public class Empleado extends Persona{
 
     public void setSueldo(double sueldo) {
         this.sueldo = sueldo;
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("Empleado{idEmpleado=").append(this.idEmpleado);
+        sb.append(", sueldo=").append(this.sueldo);
+        sb.append(", ").append(super.toString());
+        sb.append('}');
+        return sb.toString();
     }
     
     
